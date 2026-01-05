@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Copy Code</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6ec6ff, #0b3c8a);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .code-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 16px 22px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .code-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            user-select: all;
+        }
+
+        .copy-btn {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Copy Code</div>
+
+        <div class="code-wrapper">
+            <div id="code" class="code-text">HTGSI-2849718274</div>
+            <img
+                src="https://www.pngwing.com/en/free-png-iqhkl"
+                alt="Copy"
+                class="copy-btn"
+                onclick="copyCode()"
+            />
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const text = document.getElementById("code").innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+</html>
