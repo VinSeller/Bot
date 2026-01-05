@@ -39,20 +39,19 @@
             font-size: 20px;
             font-weight: 600;
             color: #333;
-            user-select: all;
         }
 
         .copy-btn {
             cursor: pointer;
-            width: 24px;
-            height: 24px;
-            opacity: 0.8;
-            transition: transform 0.15s ease, opacity 0.15s ease;
+            width: 22px;
+            height: 22px;
+            fill: #555;
+            transition: transform 0.15s ease, fill 0.15s ease;
         }
 
         .copy-btn:hover {
-            transform: scale(1.1);
-            opacity: 1;
+            transform: scale(1.15);
+            fill: #0b3c8a;
         }
     </style>
 </head>
@@ -62,12 +61,11 @@
 
         <div class="code-wrapper">
             <div id="code" class="code-text">HTGSI-2849718274</div>
-            <img
-                src="https://www.pngwing.com/en/free-png-iqhkl"
-                alt="Copy"
-                class="copy-btn"
-                onclick="copyCode()"
-            />
+
+            <!-- Inline SVG Copy Icon -->
+            <svg class="copy-btn" viewBox="0 0 24 24" onclick="copyCode()">
+                <path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h11v16z"/>
+            </svg>
         </div>
     </div>
 
